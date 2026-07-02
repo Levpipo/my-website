@@ -1,0 +1,36 @@
+/* ===== USE VARIABLES ===== */
+@use 'variables' as *;
+
+/* ===== RESET ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== BASE ===== */
+body {
+    font-family: $font-base;
+    color: $color-text;
+    background-color: #fce5bc;
+    line-height: 1.6;
+}
+
+/* LINK */
+a {
+    text-decoration: none;
+    color: $color-primary;
+}
+
+a:hover {
+    color: $color-secondary;
+}
+
+/* IMAGE */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}

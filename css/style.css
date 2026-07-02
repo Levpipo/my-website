@@ -1,0 +1,147 @@
+@charset "UTF-8";
+/* ===== VARIABLES ===== */
+/* ===== USE VARIABLES ===== */
+/* ===== RESET ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: "Inter", Arial, sans-serif;
+  color: #1d1323;
+  background-color: #fce5bc;
+  line-height: 1.6;
+}
+
+/* LINK */
+a {
+  text-decoration: none;
+  color: #5be132;
+}
+
+a:hover {
+  color: #ef937e;
+}
+
+/* IMAGE */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== MIXIN FLEX CENTER ===== */
+/* ===== MIXIN CARD ===== */
+/* ===== APPLY ===== */
+/* NAVBAR */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: #5be132;
+}
+
+/* CARD */
+.card {
+  background: #ef937e;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: #5be132;
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  text-align: center;
+  background-color: #5be132;
+  color: white;
+}
+
+/* ===== PAGE LAYOUT (GRID) ===== */
+.page-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-areas: "sidebar main";
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* SIDEBAR */
+.sidebar {
+  grid-area: sidebar;
+  background: #a0ffb0;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+/* MAIN */
+main {
+  grid-area: main;
+  padding: 16px;
+}
+
+/* ===== CARDS GRID ===== */
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* CARD */
+.card {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* ===== TABLET & MOBILE ===== */
+@media (max-width: 768px) {
+  /* GRID → 1 cột */
+  .page-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas: "main";
+  }
+  /* ẨN SIDEBAR */
+  .sidebar {
+    display: none;
+  }
+  /* NAVBAR xuống dòng */
+  .navbar {
+    flex-direction: column;
+    gap: 16px;
+  }
+  /* HERO nhỏ lại */
+  .hero {
+    min-height: 120px;
+    padding: 16px;
+  }
+  /* CARD full width */
+  .card {
+    min-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

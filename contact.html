@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+      content="Khám phá thông tin cá nhân, sở thích, mục tiêu học tập và hành trình phát triển của sinh viên Võ Ngọc Viên tại GDU.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Võ Ngọc Viên - Phương thức liên hệ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet"href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+        <h1>Võ Ngọc Viên</h1>
+        <div class="logo">
+            <p>Sinh viên GDU</p>
+        </div>
+
+        <nav class="nav-links">
+            <a href="index.html">Trang chủ</a> |
+            <a href="about.html">Giới thiệu</a> |
+            <a href="contact.html">Liên hệ</a>
+        </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Liên hệ</h2>
+
+            <p>Nếu bạn muốn liên hệ với tôi, vui lòng sử dụng các thông tin bên dưới.</p>
+
+            <p>Email: vien@example.com</p>
+            <p>Số điện thoại: 0396452617</p>
+            <p>Địa chỉ: tp. Hồ Chí Minh, Việt Nam</p>
+
+            <!-- Form sẽ được thêm ở bài học sau -->
+        </section>
+        <section>
+            <h2>Liên hệ</h2>
+
+            <form action="#" method="post">
+
+                <fieldset>
+                    <legend>Thông tin cá nhân</legend>
+                    <p>
+                        <label for="name">Họ và tên:</label>
+                        <input type="text" id="name" name="name" required minlength="2">
+                    </p>
+                    <p>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </p>
+                    <p>
+                        <label for="phone">Số điện thoại:</label>
+                        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,11}">
+                    </p>
+                    <p>
+                        <label for="date">Ngày sinh:</label>
+                        <input type="date" id="date" name="date" required>
+                    </p>
+                    <p>
+                        <label for="truong">Trường đại học:</label><br>
+
+                        <input type="text"
+                                id="truong"
+                                name="truong"
+                                list="dsTruong">
+
+                        <datalist id="dsTruong">
+                            <option value="Đại học Gia Định">
+                            <option value="Đại học Bách Khoa TP.HCM">
+                            <option value="Đại học Công nghệ Thông tin">
+                            <option value="Đại học Khoa học Tự nhiên">
+                        </datalist>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Nội dung liên hệ</legend>
+                    <p>
+                        <label for="subject">Chủ đề:</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">--Chọn chủ đề--</option>
+                            <option value="hỏi đáp">Hỏi đáp</option>
+                            <option value="góp ý">Góp ý</option>
+                            <option value="khác">Khác</option>
+                        </select>
+                    </p>
+                    <p>
+                        Kênh liên hệ ưu tiên:
+                        <br>
+                        <input type="radio"
+                            id="email-lh"
+                            name="kenhlienhe"
+                            value="email">
+                        <label for="email-lh">Email</label>
+                            <input type="radio"
+                            id="phone-lh"
+                            name="kenhlienhe"
+                            value="phone">
+                        <label for="phone-lh">Phone</label>
+                        <input type="radio"
+                            id="zalo-lh"
+                            name="kenhlienhe"
+                            value="zalo">
+                        <label for="zalo-lh">Zalo</label>
+                    </p>
+                     <p>
+                        <label for="noidung">Nội dung:</label><br>
+                        <textarea id="noidung"
+                            name="noidung"
+                            rows="5"
+                            required
+                            minlength="10"></textarea>
+                    </p>
+                    <p>
+                        <input type="checkbox"
+                            id="dongy"
+                            name="dongy"
+                            required>
+
+                        <label for="dongy">
+                            Tôi đồng ý với điều khoản liên hệ
+                        </label>
+                    </p>
+                </fieldset>
+
+            <button type="submit">Gửi</button>
+            <button type="reset">Xóa</button>
+
+        </form>
+    </section>
+    </main>
+
+     <footer>
+        <div class="footer-container">
+            <div class="footer-right">
+            <address>
+                Email: 
+                <a href="mailto:vien@example.com">vien@example.com</a>
+
+                Điện thoại:
+                <a href="tel:0396452617">0396452617</a>
+            </address>
+            </div>
+
+            <div class="footer-left">
+            <p>&copy; 2026 Võ Ngọc Viên</p>
+            <p>
+                Cập nhật:
+                <time datetime="2026-06-01">01/06/2026</time>
+            </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
